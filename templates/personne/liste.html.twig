@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste de personnes
+{% endblock %}
+
+{% block body %}
+	<ul>
+		{# afficher le tableau d'objet Personne #}
+		{% for p in personnes  %}
+			<li>{{p.id }}  - {{p.prenom }} {{p.nom }} </li>
+		{% endfor %}
+	</ul>
+
+	<a href="{{ path('personne_ajouter') }}">Ajouter une personne</a>
+{% endblock %}
