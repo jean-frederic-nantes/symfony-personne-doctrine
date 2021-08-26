@@ -7,11 +7,24 @@
 	<ul>
 		{# afficher le tableau d'objet Personne #}
 		{% for p in personnes  %}
-			<li>{{p.id }}  - {{p.prenom }} {{p.nom }} </li>
+			<li>{{p.id }}  - {{p.prenom }} {{p.nom }} 
+			<a href="{{ path('personne_modifier',{ id:p.id }) }}">Modifier</a>
+			</li>
 		{% endfor %}
 	</ul>
 
-	<a href="{{ path('personne_ajouter') }}">Ajouter une personne</a>
+	
 	<br><br>
-		<a href="{{ path('personne_ajouter_2') }}">Ajouter une personne 2</a>
+		<a href="{{ path('personne_ajouter') }}">Ajouter une personne 2</a>
+		<br><br>
+
+	<form action="{{ path('personne_ajouter_brut') }}" method="POST">
+
+		<input name="prenom" placeholder="Prénom">
+		<br><br>
+		<input name="nom" placeholder="Nom">
+		<br><br>
+		<button type="submit">Ajouter</button>
+	</form>
+
 {% endblock %}
