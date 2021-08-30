@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "cebfbb12-ec23-4c3f-8bb8-506773f6501c",
+		"name": "API Personne",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Afficher la Liste de personnes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/projet-doctrine/public/api/personne",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"projet-doctrine",
+						"public",
+						"api",
+						"personne"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ajouter 1 personne",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"prenom\":\"Jean\", \"nom\":\"RENO\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/projet-doctrine/public/api/personne?=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"projet-doctrine",
+						"public",
+						"api",
+						"personne"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modifier 1 personne",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"prenom\":\"Jean\", \"nom\":\"EPONGE\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/projet-doctrine/public/api/personne/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"projet-doctrine",
+						"public",
+						"api",
+						"personne",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Enlever 1 personne",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/projet-doctrine/public/api/personne/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"projet-doctrine",
+						"public",
+						"api",
+						"personne",
+						"11"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
